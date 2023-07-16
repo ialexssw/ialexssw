@@ -1,0 +1,32 @@
+import webbrowser
+import random
+import time
+
+websites = [
+    'https://www.google.com',
+    'https://www.youtube.com',
+    'https://www.facebook.com',
+    'https://www.reddit.com',
+    'https://www.amazon.com',
+    'https://www.twitter.com',
+    'https://www.instagram.com',
+    'https://www.linkedin.com',
+    'https://www.wikipedia.org',
+    'https://www.netflix.com'
+]
+
+def prank_websites(num_sites, delay):
+    for _ in range(num_sites):
+        # Choose a random website from the list
+        random_website = random.choice(websites)
+        # Open the website in the default web browser
+        webbrowser.open(random_website)
+        # Pause for the specified delay before opening the next website
+        time.sleep(delay)
+
+# Set the number of websites to open and the delay between openings
+num_websites = 5
+delay_seconds = 5
+
+# Call the prank_websites function with the desired parameters
+prank_websites(num_websites, delay_seconds)
